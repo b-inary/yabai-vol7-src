@@ -1,0 +1,25 @@
+[package]
+name = "yabai-vol7-src"
+version = "1.0.0"
+authors = ["Wataru Inariba"]
+edition = "2021"
+license = "MIT"
+default-run = "kuhn"
+
+[dependencies]
+bincode = "1.3.3"
+holdem-hand-evaluator = { git = "https://github.com/b-inary/holdem-hand-evaluator" }
+once_cell = "1.9.0"
+rayon = "1.5.1"
+
+[[bin]]
+name = "kuhn"
+path = "src/main_kuhn.rs"
+
+[[bin]]
+name = "push-fold"
+path = "src/main_push_fold.rs"
+
+[[bin]]
+name = "gen-table"
+path = "src/main_gen_table.rs"
